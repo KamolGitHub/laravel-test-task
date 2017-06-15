@@ -18,4 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/parcels', 'ParcelController@index')->name('parcel.index');
+Route::post('/parcels/register-prohibited-items', 'ParcelController@register')->name('parcel.register_prohibited_items');
+Route::get('/parcels/register-prohibited-items', 'ShippingRequestController@scan')->name('shipping_request.scan_prohibited_items');
+Route::get('/shipping-request/scan', 'ShippingRequestController@form_scan')->name('shipping_request.form_scan');
 
