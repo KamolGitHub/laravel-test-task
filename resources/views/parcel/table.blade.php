@@ -28,7 +28,7 @@
                 <td><a data-toggle="tooltip" data-placement="bottom" title="{{ $parcel->comment }}">?</a></td>
                 <td>
                     <?php
-                    if (isset($parcel->parcel_images[0]->filename) && !empty($parcel->parcel_images[0]->filename)) {
+                    if (isset($parcel->parcel_images[0]) && !empty($parcel->parcel_images[0]->filename)) {
                         echo '<img src="' . asset("storage/" . $parcel->parcel_images[0]->filename) . '" width="100" height="50">';
                     }
                     ?>
