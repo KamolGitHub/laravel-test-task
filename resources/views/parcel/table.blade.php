@@ -29,7 +29,7 @@
                 <td>
                     <?php
                     if (isset($parcel->parcel_images[0]) && !empty($parcel->parcel_images[0]->filename)) {
-                        echo '<img src="' . asset("storage/" . $parcel->parcel_images[0]->filename) . '" width="100" height="50">';
+                        echo '<img src="' . asset("files/" . $parcel->parcel_images[0]->filename) . '" width="100" height="50">';
                     }
                     ?>
                 </td>

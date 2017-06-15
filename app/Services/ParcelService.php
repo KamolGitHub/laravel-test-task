@@ -69,7 +69,7 @@ class ParcelService implements ParcelServiceContract
             if (!empty($request->images)) {
                 $i = 0;
                 foreach ($request->images as $image) {
-                    $images[$i]['filename'] = $image->store('images');
+                    $images[$i]['filename'] = $image->store('images', 'custom');
                     $images[$i]['parcel_id'] = $parcel->id;
                     $i++;
                 }
